@@ -164,15 +164,33 @@ System.out.println(day==Day.FRIDAY);
 
 ## split
 
+# date and time
+
+# json
+
 # file IO
 
 # network IO
+
+# object oriented programming
+
+## object lifecycle
+
+## object initialization
+
+## memory nodel
+
+## reflect 
+
+## garbage collection
 
 # process 
 
 # thread
 
 # format 
+
+# test
 
 # dependency/package management
 
