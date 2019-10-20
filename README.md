@@ -67,7 +67,7 @@ Map<String, Item> map = list.stream().filter(
 
 # enum
 
-## declaration
+## declare enum
 
 java
 ``` java 
@@ -76,7 +76,7 @@ public enum Day {
 }
 ```
 
-## print 
+## print enum
 
 java
 
@@ -100,7 +100,7 @@ day = Day.valueOf("WRONG");
 System.out.println(day);//Exception in thread "main" java.lang.IllegalArgumentException: No enum constant com.company.Day.WRONG
 ```
 
-## loop
+## loop the enum
 
 java
 ``` java
@@ -109,7 +109,7 @@ for (Day day : Day.values()){
 }
 ```
 
-## switch
+## switch by enum
 
 java
 ```java
@@ -140,7 +140,7 @@ switch (day){
 }
 ```
 
-## compare
+## compare enum
 
 java
 ```java
