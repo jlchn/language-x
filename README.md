@@ -26,6 +26,18 @@ fmt.Println(s)
 
 ## scope and external variables
 
+
+shell
+
+``` shell
+f1(){
+local xxx=1
+echo $xxx;
+echo "all variables in a function are global like in js, set it with local to make them local variables"
+echo "local can only be used in a function"
+}
+```
+
 ## pass by value and pass by reference
 
 ## dynamic length variable
