@@ -6,10 +6,10 @@
 
 ## loops (for, foreach, while, break, continue)
 
-### go
+### for
 
-``` go
-// for loop
+```go
+// go
 for i := 0; i < len(os.Args); i++ {
   fmt.Println( os.Args[i])
 }
@@ -32,13 +32,16 @@ fmt.Println(s)
 
 ## array to stream
 
-```  java 
+``` java 
+//java 
 String[] array = {"a", "b", "c", "d", "e"};
 Stream<String> stream1 = Arrays.stream(array);
 stream1.forEach(x -> System.out.println(x));
 ```
 
 ## array to map
+
+### 
 
 ``` java
 
@@ -51,6 +54,7 @@ stream1.forEach(x -> System.out.println(x));
 ### list to map 
 
 ``` java
+// java
 Map<String, Item> map = list.stream().filter(
                 vo -> !vo.getEnvType().equals("commercial"))
                 .collect(
