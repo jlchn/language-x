@@ -6,6 +6,16 @@
 
 ## loops (for, foreach, while, break, continue)
 
+### go
+
+``` go
+// for loop
+for i := 0; i < len(os.Args); i++ {
+  fmt.Println( os.Args[i])
+}
+fmt.Println(s)
+```
+
 ## switch
 
 # object or struct
