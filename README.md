@@ -30,7 +30,35 @@ fmt.Println(s)
 
 # array
 
+## array to stream
+
+```  java 
+String[] array = {"a", "b", "c", "d", "e"};
+Stream<String> stream1 = Arrays.stream(array);
+stream1.forEach(x -> System.out.println(x));
+```
+
+## array to map
+
+``` java
+
+```
+
 # collections
+
+## list 
+
+### list to map 
+
+``` java
+Map<String, Item> map = list.stream().filter(
+                vo -> !vo.getEnvType().equals("commercial"))
+                .collect(
+                        Collectors.toMap(vo -> String.join("@", vo.name(), vo.region()),
+                                vo -> vo));
+```
+
+# map
 
 # string
 
