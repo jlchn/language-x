@@ -69,20 +69,14 @@ Map<String, Item> map = list.stream().filter(
 
 # enum
 
-## declare enum
-
 java
-``` java 
+``` java
+// declare enum
 public enum Day {
     MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY,SUNDAY
 }
-```
 
-## print enum
-
-java
-
-``` java
+// print enum
 System.out.println(Day.MONDAY);//MONDAY
 System.out.println(Day.TUESDAY);//TUESDAY
 System.out.println(Day.WEDNESDAY);//WEDNESDAY
@@ -90,32 +84,20 @@ System.out.println(Day.TUESDAY);//TUESDAY
 System.out.println(Day.FRIDAY);//FRIDAY
 System.out.println(Day.SATURDAY);//SATURDAY
 System.out.println(Day.SUNDAY);//SUNDAY
-```
 
-## get enum by string
+// get enum by string
 
-java
-``` java
 Day day = Day.valueOf("FRIDAY");
 System.out.println(day);//FRIDAY
 day = Day.valueOf("WRONG");
 System.out.println(day);//Exception in thread "main" java.lang.IllegalArgumentException: No enum constant com.company.Day.WRONG
-```
 
-## loop the enum
-
-java
-``` java
+// loop over enum
 for (Day day : Day.values()){
     System.out.println(day);
 }
-```
 
-## switch by enum
-
-java
-```java
-
+// switch by enum
 Day day = Day.FRIDAY;
 switch (day){
     case MONDAY:
@@ -140,12 +122,8 @@ switch (day){
         System.out.println(6);
         break;
 }
-```
 
-## compare enum
-
-java
-```java
+// compare enum
 Day day = Day.FRIDAY;
 System.out.println(day==Day.FRIDAY);
 ```
@@ -169,6 +147,36 @@ System.out.println(day==Day.FRIDAY);
 # date and time
 
 # json
+
+java gson
+
+``` xml
+/* To use Gson, add following to pom.xml  */
+<dependency>
+    	<groupId>com.google.code.gson</groupId>
+    	<artifactId>gson</artifactId>
+    	<version>2.6.2</version>
+</dependency>
+```
+
+``` java
+// Convert java object to json string
+User user = new User();
+String userInString = new Gson().toJson(user);
+
+// Convert json string to java object
+User user = new Gson().from(userInString,User.class);
+
+// Convert json array to java List
+String jsonInstring = "[{\"tenant\":\"Google\"}, {\"tenant\":\"Facebook\"}]";
+List<Customer> list = gson.fromJson(jsonInString, new TypeToken<List<Customer>>(){}.getType());
+list.forEach(x -> System.out.println(x));
+
+// Convert json to java Map
+String jsonInstring = "{\"tenant\":\"Google\", \"landscape\":"develop"}";
+Map<String, Object> map = gson.fromJson(jsonInString, new TypeToken<Map<String, Object>>(){}.getType());
+map.forEach((x,y)-> System.out.println( x + "-" + y));
+```
 
 # file IO
 
