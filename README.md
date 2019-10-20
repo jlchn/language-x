@@ -28,6 +28,8 @@ fmt.Println(s)
 
 ## pass by value and pass by reference
 
+## dynamic length variable
+
 # array
 
 ## array to stream
@@ -183,6 +185,8 @@ System.out.println(day==Day.FRIDAY);
 ## reflect 
 
 ## garbage collection
+
+# errors and exceptions
 
 # process 
 
