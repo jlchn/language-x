@@ -130,6 +130,31 @@ System.out.println(day==Day.FRIDAY);
 
 # string
 
+- to lower case or upper case
+- trim
+- start with and end with
+- contains and index of
+- length 
+
+python
+
+``` python
+message = " hello, worlD "
+print(message)
+// to upper case
+print(message.upper())
+// to lower case
+print(message.lower())
+// convert the first character in each word to uppercase, and all other chracters to lowwercase
+print(message.title()) # Hello, World
+// remove the specified characters from right hand side of a string (By default, White spaces) 
+print(message.rstrip())
+// remove the specified characters from left hand side of a string (By default, White spaces) 
+print(message.lstrip())
+// remove the specified characters from both left and right hand side of a string (By default, White spaces) 
+print(message.strip())
+```
+
 ## initialization 
 
 ## length 
