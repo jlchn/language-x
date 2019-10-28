@@ -1,3 +1,5 @@
+> for shell, please refer to [shell cheatsheet](shell-cheatsheet.md)
+
 # basic types, operators, expressions
 
 # control flow
