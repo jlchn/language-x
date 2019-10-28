@@ -11,12 +11,6 @@ ls -i # display with inode number
 ls -n #display with uid and gid
 ```
 
-### 
-
-```shell
-ls -1
-```
-
 ### add two integers
 
 ```
