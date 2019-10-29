@@ -151,19 +151,20 @@ $ awk 'FNR <= 5' /etc/passwd # using awk
 
 ### sort
 
-```
+```bash
 sort -r -u -t : -k 5,5 /etc/passwd # unique sort in the reverse order using the values in the fifth column, using : as column delimeter
 sort -r -u -t : -k 5 -n /etc/passwd # the same with the above, but evaluate as numbers for comparison
 sort -t : -k3nr -k1 /etc/passwd # sort using the number values in the third column in reverse order, than sort using the values in the first column.
 ```
 
 ### tar
-```
+```bash
 tar -cvf backup.tar /home/jenkins #create a tar
+tar -xvf backup.tar #extract a tar
 tar -tvf backup.tar #view tar contains
 ```
 ### compare two folders
-```
+```bash
 diff -arq folder1 folder2
 git diff --no-index dir1/ dir2/
 ```
