@@ -10,10 +10,20 @@
 
 ### for
 
-go
+- python
+
+```python
+for v in range(0, 3):
+    print(v)
+[output]
+0
+1
+2
+```
+- go
 ```go
 for i := 0; i < len(os.Args); i++ {
-  fmt.Println( os.Args[i])
+  fmt.Println(os.Args[i])
 }
 fmt.Println(s)
 ```
@@ -26,12 +36,12 @@ fmt.Println(s)
 
 # functions
 
-## scope and external variables
+### scope and external variables
 
 
-shell
+- shell
 
-``` shell
+``` bash
 f1(){
 local xxx=1
 echo $xxx;
@@ -46,10 +56,11 @@ echo "local can only be used in a function"
 
 # array
 
-## array to stream
+### array to stream
 
-``` java 
-//java 
+- java
+
+``` java  
 String[] array = {"a", "b", "c", "d", "e"};
 Stream<String> stream1 = Arrays.stream(array);
 stream1.forEach(x -> System.out.println(x));
@@ -62,14 +73,117 @@ stream1.forEach(x -> System.out.println(x));
 ``` java
 
 ```
+# list 
 
-# collections
+### initialization
 
-## list 
+- python
+```python
+fruit = ['apple', 'banana', 3 , 5 ]
+print(fruit) # ['apple', 'banana', 3, 5]
+numbers = list(range(0,3))
+print(numbers)
+[output]
+0
+1
+2
+squares = [v**2 for v in range(0,2)]
+print(squares)
+```
+### access via index
 
+- python
+```python
+fruit = ['apple', 'banana', 3 , 5 ]
+print(fruit[0])  # apple
+print(fruit[-1]) # 5
+```
+### add, upate the list
+
+- python
+```python
+fruit = ['apple', 'banana', 3 , 5 ]
+fruit[0] = 'orange'
+fruit.insert(0, 'all fruit: ')
+fruit.append('all good')
+
+```
+
+### delete from the list
+
+- python
+
+```python
+fruit = ['apple', 'banana', 3 , 5 ]
+del(fruit[0])
+del(fruit[-1])
+print(fruit)          # ['banana', 3]
+poped = fruit.pop()   # delete the last one then return it
+poped = fruit.pop(1)  # delete the 2rd one then return it
+fruit.remove(3)       # delete according to specific value, this will only delete the first occurance value
+```
+
+### traverse the list
+
+- python
+```python
+fruit = ['apple', 'banana', 3 , 5 ]
+for f in fruit:
+    print(f)
+```
+
+### slice the list
+
+- python
+
+```python
+
+fruit = ['apple', 'banana', 3 , 5 ]
+print(fruit[0:2]) # ['apple', 'banana']
+fruit = ['apple', 'banana', 3 , 5 ]
+print(fruit[2:]) # [3, 5]
+fruit = ['apple', 'banana', 3 , 5 ]
+print(fruit[:2]) # ['apple', 'banana']
+
+```
+
+### sort the list
+
+- python
+``` python
+fruit = ['apple', 'banana', 3 ]
+fruit.sort()           # TypeError: '<' not supported between instances of 'int' and 'str'
+fruit = ['apple', 'banana']
+fruit.sort(reverse=True) # [ 'banana', 'appale' ]
+
+temp_sort = sorted(fruit) # sort temperarily, will not change fruit
+```
+
+### copy the list
+
+- python
+
+```python
+fruit = ['apple', 'banana', 3 , 5 ]
+new_fruit = fruit[:]
+fruit.pop()
+print(fruit)     # ['apple', 'banana', 3]
+print(new_fruit) # ['apple', 'banana', 3, 5]
+
+
+```
+
+### reverse the list
+
+- python
+```python
+fruit = ['apple', 'banana', 3 , 5 ]
+fruit.reverse()
+print(fruit) # [5, 3, 'banana', 'apple']
+```
 ### list to map 
 
-java
+- java
 
 ``` java
 Map<String, Item> map = list.stream().filter(
@@ -78,12 +192,20 @@ Map<String, Item> map = list.stream().filter(
                         Collectors.toMap(vo -> String.join("@", vo.name(), vo.region()),
                                 vo -> vo));
 ```
+### numeric list operations
 
+- python
+```python
+digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+min(digits)
+max(digits)
+sum(digits)
+```
 # map
 
 # enum
 
-java
+- java
 ``` java
 // declare enum
 public enum Day {
@@ -144,45 +266,69 @@ System.out.println(day==Day.FRIDAY);
 
 # string
 
-- to lower case or upper case
-- trim
-- start with and end with
-- contains and index of
-- length 
+### string initialization
 
-python
-
+- python
 ``` python
 message = " hello, worlD "
+message = ' hello, worlD '
 print(message)
-// to upper case
-print(message.upper())
-// to lower case
-print(message.lower())
-// convert the first character in each word to uppercase, and all other chracters to lowwercase
-print(message.title()) # Hello, World
-// remove the specified characters from right hand side of a string (By default, White spaces) 
-print(message.rstrip())
-// remove the specified characters from left hand side of a string (By default, White spaces) 
-print(message.lstrip())
-// remove the specified characters from both left and right hand side of a string (By default, White spaces) 
-print(message.strip())
 ```
 
-## initialization 
+### length 
 
-## length 
+- python 
+```python
 
-## copy
+message = ' hello, worlD '
+len(message)
+```
+### to lower case and upper case
 
-## concat
+- python
+``` python
+message = " hello, worlD "
+print(message.upper())   # to upper case 
+print(message.lower())   # to lower case
+```
+### trim
 
-## compare
+- python
+```python
+message = " hello, worlD "
+print(message.rstrip())  # remove the specified characters from right hand side of a string (By default, White spaces)
+ hello, worlD
+print(message.lstrip())  # remove the specified characters from left hand side of a string (By default, White spaces) 
+hello, worlD 
+print(message.strip())   # remove the specified characters from both left and right hand side of a string (By default, White spaces)
+hello, worlD
+```
+### start with and end with
+### contains and index of
+### concat and split
 
-## search in strings(contains, index of)
+- python
+``` python
+ print("hello," + " world") # concat 2 strings
+```
+### compare
+### title
 
-## split
+- python
 
+```python
+# python
+message = "hello, worlD"
+print(message.title())   # convert the first character in each word to uppercase, and all other chracters to lowwercase
+Hello, World 
+```
+# type conversion
+
+python
+``` python
+age = 3
+print("I am " + str(age))
+```
 # date and time
 
 # json
