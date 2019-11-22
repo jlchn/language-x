@@ -26,6 +26,15 @@ if 'apple' in fruit:
     print('yes')
 if 'orange' not in fruit:
     print('yes')
+
+# is list empty
+empty_list = []
+
+if empty_list:
+    print(empty_list)
+else:
+    print('it is empty')
+
 ```
 
 ## loops (for, foreach, while, break, continue)
@@ -395,6 +404,8 @@ python
 ``` python
 age = 3
 print("I am " + str(age))
+age = '3'
+age = int(age)
 ```
 # date and time
 
