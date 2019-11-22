@@ -98,6 +98,13 @@ fruit = ['apple', 'banana', 3 , 5 ]
 print(fruit[0])  # apple
 print(fruit[-1]) # 5
 ```
+- python tuple
+``` python
+fruit = ('apple', 'banana', 3 , 5 ) # ('apple', 'banana', 3, 5)
+print(fruit[0])  # apple
+print(fruit[-1]) # 5
+
+```
 ### add, upate the list
 
 - python
@@ -108,7 +115,14 @@ fruit.insert(0, 'all fruit: ')
 fruit.append('all good')
 
 ```
+- python tuple
 
+python tuple is not allowed to be updated, only assignment allowed
+``` python
+fruit = ('apple', 'banana', 3 , 5 )
+fruit = ('orange')
+
+```
 ### delete from the list
 
 - python
@@ -122,6 +136,9 @@ poped = fruit.pop()   # delete the last one then return it
 poped = fruit.pop(1)  # delete the 2rd one then return it
 fruit.remove(3)       # delete according to specific value, this will only delete the first occurance value
 ```
+- python tuple
+
+python tuple is not allowed to be deleted
 
 ### traverse the list
 
@@ -131,7 +148,14 @@ fruit = ['apple', 'banana', 3 , 5 ]
 for f in fruit:
     print(f)
 ```
+- python tuple
 
+``` python
+fruit = ('apple', 'banana', 3 , 5 )
+for f in fruit:
+    print(f)
+
+```
 ### slice the list
 
 - python
@@ -140,13 +164,19 @@ for f in fruit:
 
 fruit = ['apple', 'banana', 3 , 5 ]
 print(fruit[0:2]) # ['apple', 'banana']
-fruit = ['apple', 'banana', 3 , 5 ]
 print(fruit[2:]) # [3, 5]
-fruit = ['apple', 'banana', 3 , 5 ]
 print(fruit[:2]) # ['apple', 'banana']
 
 ```
+- python tuple
 
+``` python
+fruit = ('apple', 'banana', 3 , 5 )
+print(fruit[0:2]) # ('apple', 'banana')
+print(fruit[2:]) # (3, 5)
+print(fruit[:2]) # ('apple', 'banana')
+
+```
 ### sort the list
 
 - python
@@ -157,6 +187,13 @@ fruit = ['apple', 'banana']
 fruit.sort(reverse=True) # [ 'banana', 'appale' ]
 
 temp_sort = sorted(fruit) # sort temperarily, will not change fruit
+```
+
+- python tuple
+``` python
+fruit = ['apple', 'banana'] 
+fruit.sort(reverse=True) # 'tuple' object has no attribute 'sort'
+temp_sort = sorted(fruit) # sort temperarily, and return a list instead of a new tuple: ['apple', 'banana']
 ```
 
 ### copy the list
@@ -170,6 +207,14 @@ fruit.pop()
 print(fruit)     # ['apple', 'banana', 3]
 print(new_fruit) # ['apple', 'banana', 3, 5]
 
+
+```
+
+- python tuple
+
+```python
+fruit = ('apple', 'banana', 3 , 5 )
+new_fruit = fruit[:]
 
 ```
 
