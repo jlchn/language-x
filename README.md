@@ -6,6 +6,28 @@
 
 ## if, if else, else if
 
+- python 
+
+``` python
+# if, elif, else, and, or
+flag_1 = 'a'
+flag_2 = 'd'
+if flag_1 == 'a' and flag_2 == 'd':
+    print('best')
+elif flag_1 == 'a' or flag_2 == 'd':
+    print('not so good')
+else:
+    print('bad')
+
+fruit = ['banana' , 'apple']
+
+# in, not in
+if 'apple' in fruit:
+    print('yes')
+if 'orange' not in fruit:
+    print('yes')
+```
+
 ## loops (for, foreach, while, break, continue)
 
 ### for
