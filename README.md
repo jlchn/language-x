@@ -452,6 +452,7 @@ System.out.println(day==Day.FRIDAY);
 message = " hello, worlD "
 message = ' hello, worlD '
 print(message)
+print(message[0]) # h
 ```
 
 ### length 
@@ -461,6 +462,7 @@ print(message)
 
 message = ' hello, worlD '
 len(message)
+message.count('l') # 3
 ```
 ### to lower case and upper case
 
@@ -489,6 +491,19 @@ hello, worlD
 - python
 ``` python
  print("hello," + " world") # concat 2 strings
+'hello world'.split('o w')  # ['hell', 'orld']
+```
+
+### slice the string
+
+- python
+```python 
+
+message = 'hello world'
+message[2:5] # llo
+message[:5]  # hello
+message[2:]  # llo world
+
 ```
 ### compare
 ### title
@@ -710,6 +725,14 @@ except FileNotFoundError:
 # thread
 
 # format 
+
+- python
+
+``` python
+'{0} {1}'.format('good', 'boy') # good boy
+'{0:.2f} {1}'.format(12.456, 'GB') # 12.46 GB
+'No.{0}'.format(1)
+```
 
 # read from stdin
 
