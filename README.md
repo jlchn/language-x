@@ -72,6 +72,10 @@ fmt.Println(s)
 
 ## switch
 
+- python 
+    - no switch-case in python
+
+
 # object or struct
 
 # pointers
