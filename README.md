@@ -50,6 +50,17 @@ for v in range(0, 3):
 0
 1
 2
+
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+
+while True:
+    message = input("please input")
+    if message == 'quit':
+        break
+    print(message)
 ```
 - go
 ```go
@@ -166,6 +177,11 @@ print(fruit)          # ['banana', 3]
 poped = fruit.pop()   # delete the last one then return it
 poped = fruit.pop(1)  # delete the 2rd one then return it
 fruit.remove(3)       # delete according to specific value, this will only delete the first occurance value
+
+fruit = ['apple', 'banana', 'banana' ]
+while f in fruit:
+    fruit.remove(f)
+
 ```
 - python tuple
 
@@ -178,6 +194,11 @@ python tuple is not allowed to be deleted
 fruit = ['apple', 'banana', 3 , 5 ]
 for f in fruit:
     print(f)
+
+while fruit:
+    poped = fruit.pop()
+    print(poped)
+
 ```
 - python tuple
 
@@ -278,6 +299,50 @@ max(digits)
 sum(digits)
 ```
 # map
+
+### initialization
+- python
+
+```python
+d = {}
+d = { "name": "name", "age" : 1}
+print(d['name'])
+```
+
+### add, update map
+- python
+
+```python
+d = { "name": "name", "age" : 1}
+d['sex'] = 'M' # add 
+d['name'] = 'my_name' # update
+print(d)
+```
+
+### delete from map
+- python
+
+```python
+d = { "name": "name", "age" : 1}
+d['sex'] = 'M' # add 
+del d['sex']
+print(d)
+```
+
+### traverse the map
+- python
+
+```python
+d = { "name": "name", "age" : 1}
+for k, v in d.items():
+    print(k + ": " + str(v))
+
+for k in d.keys():
+    print(k)
+
+for v in d.values():
+    print(v)
+```
 
 # enum
 
@@ -464,6 +529,16 @@ map.forEach((x,y)-> System.out.println( x + "-" + y));
 # thread
 
 # format 
+
+# read from stdin
+
+- python
+
+```python
+
+message = input("Please input your message: ")
+print(message)
+```
 
 # test
 
