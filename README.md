@@ -723,6 +723,37 @@ print(message)
 
 # test
 
+- python
+
+``` python
+# functions.py
+def get_str():
+        return 'str'
+
+def get_bool():
+        return True
+
+def get_list():
+        return ['banana','apple']
+
+# test_functions.py
+import unittest
+import functions as f
+
+class FunctionsTestCase(unittest.TestCase):
+	def test_get_str(self):
+		self.assertEqual(f.get_str(), 'str')
+		self.assertNotEqual(f.get_str(), 'str2')
+	def test_get_bool(self):
+		self.assertTrue(f.get_bool())
+		self.assertFalse(not f.get_bool())
+	def test_get_list(self):
+		self.assertIn('apple', f.get_list())
+		self.assertNotIn('orange', f.get_list())
+
+unittest.main()
+```
+
 # dependency/package management
 
 ## maven for java
