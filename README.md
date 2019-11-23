@@ -82,6 +82,40 @@ fmt.Println(s)
 
 # functions
 
+
+- python
+
+```python
+
+def create_user(name, age, sex = 'M'): # create a method with default parameter values
+    user = {}
+    user['name'] = name
+    user['age'] = age
+    user['sex'] = sex
+    print(user)
+    return user
+
+create_user('jiangli', 34 )
+create_user() # TypeError: create_user() missing 2 required positional arguments: 'name' and 'age'
+create_user(age = 34, name = 'my-name' ) # named parameter, parameter sequence can be different from defination
+create_user('jiangli', 34, 'F' )
+
+# pass arbitrary items in a tuple
+def show_hobby(name, *hobbies):
+    print(hobbies)
+    for hobby in hobbies:
+        print(hobby)
+show_hobby('my-name', 'singing', 'dancing')
+
+
+# pass arbitrary key values
+def show_profile(name, **profiles):
+    print(profiles)
+    for k, v in profiles.items():
+        print(k + ": " + v)
+show_profile('my-name', addrss='Rd. 5', phone='88888888')
+```
+
 ### scope and external variables
 
 
