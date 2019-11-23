@@ -514,7 +514,26 @@ age = int(age)
 
 # json
 
-java gson
+- python
+
+```python
+import json
+
+json_obj = {}
+json_obj['name'] = 'my-name'
+json_obj['age'] = 20
+
+with open('1.txt', 'w') as file:
+	json.dump(json_obj, file)
+
+
+with open('1.txt') as file:
+	contents= json.load(file)
+	print(contents)
+
+```
+
+- java gson
 
 ``` xml
 /* To use Gson, add following to pom.xml  */
@@ -620,8 +639,56 @@ electricCar.add_run_meter(200)
 electricCar.describe()
 
 ```
+# errors and exceptions
+
+- python
+
+``` python
+first = input("\nFirst number: ") 
+second = input("Second number: ")
+try:
+    answer = int(first) / int(second)
+except ZeroDivisionError: 
+    print("You can't divide by 0!")
+else: 
+    print(answer)
+
+```
 
 # file IO
+
+- python
+
+``` python
+# write to a file
+with open('1.txt', 'w') as file:
+	file.write('000\n123\n456\n789\n')
+
+# append to a file
+with open('1.txt', 'a') as file:
+	file.write('1000\n')
+
+
+# read all contents at once
+with open('1.txt') as file:
+	contents = file.read()
+	print(contents)
+
+# read line by line
+with open('1.txt') as file:
+	for line in file:
+		print(line.rstrip())
+
+# read to a list
+try:
+    with open('1.txt') as file:
+        contents =  file.readlines()
+    for line in contents:
+        print(line.rstrip())
+except FileNotFoundError:
+    print("the file cannot be found")
+
+```
 
 # network IO
 
@@ -637,7 +704,6 @@ electricCar.describe()
 
 ## garbage collection
 
-# errors and exceptions
 
 # process 
 
