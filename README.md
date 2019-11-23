@@ -544,6 +544,47 @@ Map<String, Object> map = gson.fromJson(jsonInString, new TypeToken<Map<String, 
 map.forEach((x,y)-> System.out.println( x + "-" + y));
 ```
 
+# module
+
+- python
+
+``` python
+
+# create a module named user
+# user.py
+create_user(name, age):
+    print('user created')
+delete_user(name):
+    print('user deleted')
+# end of user.py
+
+# refer to the user module
+# main_1.py
+import user
+# import user as u
+user.create_user('my-name', 20)
+user.delete_user('my-name')
+# end of main_1.py
+
+# refer to the user module with an alias name
+# main_2.py
+import user as u
+u.create_user('my-name', 20)
+u.delete_user('my-name')
+# end of main_2.py
+
+# refer to some methods of user module 
+# main_3.py
+from user import delete_user as d
+d.delete_user('my-name')
+# end of main_3.py
+
+```
+
+# class
+
+
+
 # file IO
 
 # network IO
