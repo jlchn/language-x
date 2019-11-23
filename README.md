@@ -583,7 +583,43 @@ d.delete_user('my-name')
 
 # class
 
+- python
+``` python
 
+# car.py
+class Car:
+	def __init__(self, model, year):
+		self.model  = model
+		self.year  = year
+		self.run_meter = 0 # default value
+
+	def describe(self):
+		print(self.model + ": " + str(self.year))
+		print("I have been running for "+ str(self.run_meter) + ' meters')
+	def add_run_meter(self, meter):
+		self.run_meter += meter
+
+
+class ElectricCar(Car): # inherit from parent class
+        def __init__(self, model, year):
+                super().__init__(model, year) # init using parent init method
+                self.battery_size = 10000
+        def describe(self): # override the parent method
+                super().describe()
+                print("battery size: "+ str(self.battery_size))
+
+# main.py
+from car import Car, ElectricCar
+
+car = Car('w', 2019)
+car.add_run_meter(100)
+car.describe()
+
+electricCar = ElectricCar('telsla', 2019)
+electricCar.add_run_meter(200)
+electricCar.describe()
+
+```
 
 # file IO
 
