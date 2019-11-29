@@ -486,12 +486,36 @@ hello, worlD
 ```
 ### start with and end with
 ### contains and index of
-### concat and split
+### join and split
 
 - python
 ``` python
  print("hello," + " world") # concat 2 strings
 'hello world'.split('o w')  # ['hell', 'orld']
+```
+
+- java
+
+``` java
+
+// using String.join
+String result = String.join("-", "2015", "10", "31" );// 2015-10-31
+String result = String.join(", ", list);
+
+// using StringJoiner
+StringJoiner sj = new StringJoiner(",");
+sj.add("aaa");
+sj.add("bbb");
+String result = sj.toString(); // aaa,bbb
+
+StringJoiner sj = new StringJoiner("/", "prefix-", "-suffix");
+sj.add("2016");
+sj.add("02");
+String result = sj.toString(); // prefix-2016/02-suffix
+
+// using lambda
+String result = list.stream().map(x -> x).collect(Collectors.joining(" | "));
+
 ```
 
 ### slice the string
@@ -704,7 +728,21 @@ except FileNotFoundError:
     print("the file cannot be found")
 
 ```
+- java
 
+``` java
+// construct a file path
+Paths.get(part1,part2,part3,.....)
+// create file as well as dirs
+Files.createDirectories(scriptPath.getParent());
+Files.createFile(scriptPath);
+// get a file or dir, create if not exists
+File dir = FileUtils.getFile(path);
+// delete a directory
+FileUtils.deleteDirectory(dir);
+// inputstream to file
+FileUtils.copyInputStreamToFile(x.getInputStream(), targetFile);
+```
 # network IO
 
 # object oriented programming
