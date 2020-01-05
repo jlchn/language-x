@@ -41,11 +41,15 @@ echo "$v1 and $v2"
 
 ### parameter expansion
 
-create a file named `test.sh`
+`${parameter:-word}`: If parameter is unset or null, the expansion of word is substituted. Otherwise, the value of parameter is substituted.
+
+`${parameter:?word}`: If parameter is null or unset, the expansion of word (or a message to that effect if word is not present) is written to the standard error and the shell, if it is not interactive, exits. Otherwise, the value of parameter is substituted.
+
+let's create a file named `test.sh`:
 
 ``` bash
 #! /bin/bash
-filename=${1:-~/tmp/test.txt}
+filename=${1:-~/tmp/test.txt}  
 echo $filename
 filetype=${2:?filetype should be provided!}
 ```
@@ -124,6 +128,7 @@ grep 'warning\|error\|critical' /var/log/messages #find appearances in a file
 grep -w 'warning\|error\|critical' /var/log/messages #find words in a file
 grep -r '172.26.131.131' . find recursively
 grep -rnw '/path/to/somewhere/' -e 'some texts' # find text in folder files 
+grep -vE "websocket" # invert match, selected lines are those not matching any of the specified patterns
 ```
 ### line count
 
