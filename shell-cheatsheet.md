@@ -38,6 +38,25 @@ echo $v1 # get value of variable
 echo "$v1 and $v2"
 
 ```
+
+### parameter expansion
+
+create a file named `test.sh`
+
+``` bash
+#! /bin/bash
+filename=${1:-~/tmp/test.txt}
+echo $filename
+filetype=${2:?filetype should be provided!}
+```
+run `test.sh`
+
+``` bash
+bash test.sh file1.sh
+file1.sh
+filetype should be provided!
+```
+
 ### printf
 
 printf is more powerful than echo
