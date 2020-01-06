@@ -817,6 +817,13 @@ unittest.main()
 
 # dependency/package management
 
+## go
+
+``` bash
+go get -u -v -f all # download all dependencies
+
+```
+
 ## maven for java
 
 ``` shell
